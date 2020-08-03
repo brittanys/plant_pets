@@ -1,0 +1,710 @@
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "plants" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "watered_at" datetime, "fed_at" datetime, "growth" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200731182343)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-07-31 18:50:32.806664"], ["updated_at", "2020-07-31 18:50:32.806664"]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-07-31 18:40:32.869784"], ["fed_at", "2020-07-31 18:40:32.869852"], ["created_at", "2020-07-31 18:50:32.877019"], ["updated_at", "2020-07-31 18:50:32.877019"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-07-31 18:46:33.050833"], ["fed_at", "2020-07-31 18:40:33.050864"], ["created_at", "2020-07-31 18:50:33.051253"], ["updated_at", "2020-07-31 18:50:33.051253"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-07-31 18:41:38.382442"], ["fed_at", "2020-07-31 18:41:38.382476"], ["created_at", "2020-07-31 18:51:38.387727"], ["updated_at", "2020-07-31 18:51:38.387727"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-07-31 18:47:38.439894"], ["fed_at", "2020-07-31 18:41:38.439928"], ["created_at", "2020-07-31 18:51:38.440327"], ["updated_at", "2020-07-31 18:51:38.440327"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-07-31 18:43:14.513572"], ["fed_at", "2020-07-31 18:43:14.513629"], ["created_at", "2020-07-31 18:53:14.519187"], ["updated_at", "2020-07-31 18:53:14.519187"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-07-31 18:49:14.570062"], ["fed_at", "2020-07-31 18:43:14.570093"], ["created_at", "2020-07-31 18:53:14.570437"], ["updated_at", "2020-07-31 18:53:14.570437"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-07-31 18:43:14.572640"], ["fed_at", "2020-07-31 18:43:14.572666"], ["created_at", "2020-07-31 18:53:14.572975"], ["updated_at", "2020-07-31 18:53:14.572975"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-07-31 18:49:14.575144"], ["fed_at", "2020-07-31 18:45:14.575168"], ["created_at", "2020-07-31 18:53:14.575468"], ["updated_at", "2020-07-31 18:53:14.575468"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "plants" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "watered_at" datetime, "fed_at" datetime, "growth" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "water_amount" integer, "fed_amount" integer)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200801151734)[0m
+  [1m[35m (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20200731182343);
+
+[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-08-02 16:44:30.949633"], ["updated_at", "2020-08-02 16:44:30.949633"]]
+  [1m[35m (0.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:44:30.991086"], ["fed_at", "2020-08-02 16:44:30.991103"], ["growth", 14], ["created_at", "2020-08-02 16:44:30.991240"], ["updated_at", "2020-08-02 16:44:30.991240"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:44:31.134598"], ["fed_at", "2020-08-02 16:44:31.134613"], ["growth", 14], ["created_at", "2020-08-02 16:44:31.134636"], ["updated_at", "2020-08-02 16:44:31.134636"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:44:31.137256"], ["fed_at", "2020-08-02 16:44:31.137287"], ["growth", 14], ["created_at", "2020-08-02 16:44:31.137306"], ["updated_at", "2020-08-02 16:44:31.137306"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:44:31.139980"], ["fed_at", "2020-08-02 16:44:31.139993"], ["growth", 14], ["created_at", "2020-08-02 16:44:31.140012"], ["updated_at", "2020-08-02 16:44:31.140012"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:45:13.036142"], ["fed_at", "2020-08-02 16:45:13.036159"], ["growth", 14], ["created_at", "2020-08-02 16:45:13.036188"], ["updated_at", "2020-08-02 16:45:13.036188"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:45:13.112123"], ["fed_at", "2020-08-02 16:45:13.112142"], ["growth", 14], ["created_at", "2020-08-02 16:45:13.112170"], ["updated_at", "2020-08-02 16:45:13.112170"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:45:13.116450"], ["fed_at", "2020-08-02 16:45:13.116472"], ["growth", 14], ["created_at", "2020-08-02 16:45:13.116499"], ["updated_at", "2020-08-02 16:45:13.116499"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:45:13.119646"], ["fed_at", "2020-08-02 16:45:13.119661"], ["growth", 14], ["created_at", "2020-08-02 16:45:13.119683"], ["updated_at", "2020-08-02 16:45:13.119683"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:45:13.122400"], ["fed_at", "2020-08-02 16:45:13.122425"], ["growth", 0], ["created_at", "2020-08-02 16:45:13.122459"], ["updated_at", "2020-08-02 16:45:13.122459"], ["water_amount", 0], ["fed_amount", 0]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:45:13.128099"], ["fed_at", "2020-08-02 16:45:13.128115"], ["growth", 10], ["created_at", "2020-08-02 16:45:13.128178"], ["updated_at", "2020-08-02 16:45:13.128178"], ["water_amount", 5], ["fed_amount", 5]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.9ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:45:13.134742"], ["fed_at", "2020-08-02 16:45:13.134784"], ["growth", 20], ["created_at", "2020-08-02 16:45:13.135107"], ["updated_at", "2020-08-02 16:45:13.135107"], ["water_amount", 10], ["fed_amount", 10]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:52:55.505426"], ["fed_at", "2020-08-02 16:52:55.505442"], ["growth", 14], ["created_at", "2020-08-02 16:52:55.505470"], ["updated_at", "2020-08-02 16:52:55.505470"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:52:55.569400"], ["fed_at", "2020-08-02 16:52:55.569415"], ["growth", 14], ["created_at", "2020-08-02 16:52:55.569437"], ["updated_at", "2020-08-02 16:52:55.569437"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:52:55.572102"], ["fed_at", "2020-08-02 16:52:55.572114"], ["growth", 14], ["created_at", "2020-08-02 16:52:55.572137"], ["updated_at", "2020-08-02 16:52:55.572137"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:52:55.574729"], ["fed_at", "2020-08-02 16:52:55.574742"], ["growth", 14], ["created_at", "2020-08-02 16:52:55.574762"], ["updated_at", "2020-08-02 16:52:55.574762"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:52:55.577845"], ["fed_at", "2020-08-02 16:52:55.577859"], ["growth", 0], ["created_at", "2020-08-02 16:52:55.577879"], ["updated_at", "2020-08-02 16:52:55.577879"], ["water_amount", 0], ["fed_amount", 0]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:52:55.580004"], ["fed_at", "2020-08-02 16:52:55.580016"], ["growth", 10], ["created_at", "2020-08-02 16:52:55.580054"], ["updated_at", "2020-08-02 16:52:55.580054"], ["water_amount", 5], ["fed_amount", 5]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:52:55.582248"], ["fed_at", "2020-08-02 16:52:55.582261"], ["growth", 20], ["created_at", "2020-08-02 16:52:55.582280"], ["updated_at", "2020-08-02 16:52:55.582280"], ["water_amount", 10], ["fed_amount", 10]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:54:22.276544"], ["fed_at", "2020-08-02 16:54:22.276560"], ["growth", 14], ["created_at", "2020-08-02 16:54:22.276587"], ["updated_at", "2020-08-02 16:54:22.276587"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:54:22.348340"], ["fed_at", "2020-08-02 16:54:22.348355"], ["growth", 14], ["created_at", "2020-08-02 16:54:22.348378"], ["updated_at", "2020-08-02 16:54:22.348378"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:54:22.351650"], ["fed_at", "2020-08-02 16:54:22.351667"], ["growth", 14], ["created_at", "2020-08-02 16:54:22.351714"], ["updated_at", "2020-08-02 16:54:22.351714"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:54:22.354814"], ["fed_at", "2020-08-02 16:54:22.354830"], ["growth", 14], ["created_at", "2020-08-02 16:54:22.354889"], ["updated_at", "2020-08-02 16:54:22.354889"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:54:22.357783"], ["fed_at", "2020-08-02 16:54:22.357797"], ["growth", 0], ["created_at", "2020-08-02 16:54:22.357819"], ["updated_at", "2020-08-02 16:54:22.357819"], ["water_amount", 0], ["fed_amount", 0]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:54:22.360342"], ["fed_at", "2020-08-02 16:54:22.360356"], ["growth", 10], ["created_at", "2020-08-02 16:54:22.360375"], ["updated_at", "2020-08-02 16:54:22.360375"], ["water_amount", 5], ["fed_amount", 5]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:54:22.362779"], ["fed_at", "2020-08-02 16:54:22.362795"], ["growth", 20], ["created_at", "2020-08-02 16:54:22.362816"], ["updated_at", "2020-08-02 16:54:22.362816"], ["water_amount", 10], ["fed_amount", 10]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:55:30.598820"], ["fed_at", "2020-08-02 16:55:30.598837"], ["growth", 14], ["created_at", "2020-08-02 16:55:30.598864"], ["updated_at", "2020-08-02 16:55:30.598864"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.7ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:55:30.604386"], ["fed_at", "2020-08-02 16:55:30.604400"], ["growth", 14], ["created_at", "2020-08-02 16:55:30.604421"], ["updated_at", "2020-08-02 16:55:30.604421"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:55:30.616218"], ["fed_at", "2020-08-02 16:55:30.616233"], ["growth", 14], ["created_at", "2020-08-02 16:55:30.616253"], ["updated_at", "2020-08-02 16:55:30.616253"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:55:30.621199"], ["fed_at", "2020-08-02 16:55:30.621217"], ["growth", 0], ["created_at", "2020-08-02 16:55:30.621240"], ["updated_at", "2020-08-02 16:55:30.621240"], ["water_amount", 0], ["fed_amount", 0]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.6ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:55:30.624365"], ["fed_at", "2020-08-02 16:55:30.624380"], ["growth", 10], ["created_at", "2020-08-02 16:55:30.624425"], ["updated_at", "2020-08-02 16:55:30.624425"], ["water_amount", 5], ["fed_amount", 5]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:55:30.627511"], ["fed_at", "2020-08-02 16:55:30.627535"], ["growth", 20], ["created_at", "2020-08-02 16:55:30.627568"], ["updated_at", "2020-08-02 16:55:30.627568"], ["water_amount", 10], ["fed_amount", 10]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (1.0ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:56:45.838906"], ["fed_at", "2020-08-02 16:56:45.838947"], ["growth", 14], ["created_at", "2020-08-02 16:56:45.839033"], ["updated_at", "2020-08-02 16:56:45.839033"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:57:07.916398"], ["fed_at", "2020-08-02 16:57:07.916412"], ["growth", 14], ["created_at", "2020-08-02 16:57:07.916435"], ["updated_at", "2020-08-02 16:57:07.916435"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:57:07.922393"], ["fed_at", "2020-08-02 16:57:07.922415"], ["growth", 14], ["created_at", "2020-08-02 16:57:07.922448"], ["updated_at", "2020-08-02 16:57:07.922448"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:57:07.927335"], ["fed_at", "2020-08-02 16:57:07.927349"], ["growth", 14], ["created_at", "2020-08-02 16:57:07.927373"], ["updated_at", "2020-08-02 16:57:07.927373"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:57:07.930150"], ["fed_at", "2020-08-02 16:57:07.930164"], ["growth", 0], ["created_at", "2020-08-02 16:57:07.930187"], ["updated_at", "2020-08-02 16:57:07.930187"], ["water_amount", 0], ["fed_amount", 0]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:57:07.932574"], ["fed_at", "2020-08-02 16:57:07.932587"], ["growth", 10], ["created_at", "2020-08-02 16:57:07.932609"], ["updated_at", "2020-08-02 16:57:07.932609"], ["water_amount", 5], ["fed_amount", 5]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:57:07.935279"], ["fed_at", "2020-08-02 16:57:07.935300"], ["growth", 20], ["created_at", "2020-08-02 16:57:07.935336"], ["updated_at", "2020-08-02 16:57:07.935336"], ["water_amount", 10], ["fed_amount", 10]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.6ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:57:38.741517"], ["fed_at", "2020-08-02 16:57:38.741556"], ["growth", 14], ["created_at", "2020-08-02 16:57:38.741619"], ["updated_at", "2020-08-02 16:57:38.741619"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:57:38.829469"], ["fed_at", "2020-08-02 16:57:38.829485"], ["growth", 14], ["created_at", "2020-08-02 16:57:38.829509"], ["updated_at", "2020-08-02 16:57:38.829509"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:57:38.832252"], ["fed_at", "2020-08-02 16:57:38.832267"], ["growth", 14], ["created_at", "2020-08-02 16:57:38.832289"], ["updated_at", "2020-08-02 16:57:38.832289"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:57:38.836343"], ["fed_at", "2020-08-02 16:57:38.836369"], ["growth", 14], ["created_at", "2020-08-02 16:57:38.836421"], ["updated_at", "2020-08-02 16:57:38.836421"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:57:38.839474"], ["fed_at", "2020-08-02 16:57:38.839489"], ["growth", 0], ["created_at", "2020-08-02 16:57:38.839512"], ["updated_at", "2020-08-02 16:57:38.839512"], ["water_amount", 0], ["fed_amount", 0]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:57:38.842570"], ["fed_at", "2020-08-02 16:57:38.842663"], ["growth", 10], ["created_at", "2020-08-02 16:57:38.842786"], ["updated_at", "2020-08-02 16:57:38.842786"], ["water_amount", 5], ["fed_amount", 5]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:57:38.846411"], ["fed_at", "2020-08-02 16:57:38.846426"], ["growth", 20], ["created_at", "2020-08-02 16:57:38.846446"], ["updated_at", "2020-08-02 16:57:38.846446"], ["water_amount", 10], ["fed_amount", 10]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:58:01.430515"], ["fed_at", "2020-08-02 16:58:01.430535"], ["growth", 14], ["created_at", "2020-08-02 16:58:01.430573"], ["updated_at", "2020-08-02 16:58:01.430573"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:59:08.470306"], ["fed_at", "2020-08-02 16:59:08.470441"], ["growth", 14], ["created_at", "2020-08-02 16:59:08.470477"], ["updated_at", "2020-08-02 16:59:08.470477"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (3.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:59:08.476297"], ["fed_at", "2020-08-02 16:59:08.476311"], ["growth", 14], ["created_at", "2020-08-02 16:59:08.476330"], ["updated_at", "2020-08-02 16:59:08.476330"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:59:08.480394"], ["fed_at", "2020-08-02 16:59:08.480415"], ["growth", 14], ["created_at", "2020-08-02 16:59:08.480439"], ["updated_at", "2020-08-02 16:59:08.480439"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:59:08.483733"], ["fed_at", "2020-08-02 16:59:08.483749"], ["growth", 0], ["created_at", "2020-08-02 16:59:08.483770"], ["updated_at", "2020-08-02 16:59:08.483770"], ["water_amount", 0], ["fed_amount", 0]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:59:08.490806"], ["fed_at", "2020-08-02 16:59:08.490832"], ["growth", 10], ["created_at", "2020-08-02 16:59:08.490860"], ["updated_at", "2020-08-02 16:59:08.490860"], ["water_amount", 5], ["fed_amount", 5]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 16:59:08.494166"], ["fed_at", "2020-08-02 16:59:08.494181"], ["growth", 20], ["created_at", "2020-08-02 16:59:08.494202"], ["updated_at", "2020-08-02 16:59:08.494202"], ["water_amount", 10], ["fed_amount", 10]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:01:03.877508"], ["fed_at", "2020-08-02 17:01:03.877550"], ["growth", 14], ["created_at", "2020-08-02 17:01:03.877597"], ["updated_at", "2020-08-02 17:01:03.877597"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:01:04.011943"], ["fed_at", "2020-08-02 17:01:04.011958"], ["growth", 14], ["created_at", "2020-08-02 17:01:04.011982"], ["updated_at", "2020-08-02 17:01:04.011982"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.2ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:01:04.017498"], ["fed_at", "2020-08-02 17:01:04.017515"], ["growth", 14], ["created_at", "2020-08-02 17:01:04.017535"], ["updated_at", "2020-08-02 17:01:04.017535"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:01:04.023560"], ["fed_at", "2020-08-02 17:01:04.023574"], ["growth", 14], ["created_at", "2020-08-02 17:01:04.023594"], ["updated_at", "2020-08-02 17:01:04.023594"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:01:04.026651"], ["fed_at", "2020-08-02 17:01:04.026664"], ["growth", 0], ["created_at", "2020-08-02 17:01:04.026682"], ["updated_at", "2020-08-02 17:01:04.026682"], ["water_amount", 0], ["fed_amount", 0]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:01:04.029765"], ["fed_at", "2020-08-02 17:01:04.029786"], ["growth", 10], ["created_at", "2020-08-02 17:01:04.029812"], ["updated_at", "2020-08-02 17:01:04.029812"], ["water_amount", 5], ["fed_amount", 5]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:01:04.032936"], ["fed_at", "2020-08-02 17:01:04.032950"], ["growth", 20], ["created_at", "2020-08-02 17:01:04.032973"], ["updated_at", "2020-08-02 17:01:04.032973"], ["water_amount", 10], ["fed_amount", 10]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.8ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:11:34.313774"], ["fed_at", "2020-08-02 17:11:34.313795"], ["growth", 14], ["created_at", "2020-08-02 17:11:34.313842"], ["updated_at", "2020-08-02 17:11:34.313842"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:23:53.486332"], ["fed_at", "2020-08-02 17:23:53.486348"], ["growth", 14], ["created_at", "2020-08-02 17:23:53.486375"], ["updated_at", "2020-08-02 17:23:53.486375"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.7ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:23:53.550825"], ["fed_at", "2020-08-02 17:23:53.550914"], ["growth", 14], ["created_at", "2020-08-02 17:23:53.551037"], ["updated_at", "2020-08-02 17:23:53.551037"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:23:53.557718"], ["fed_at", "2020-08-02 17:23:53.557734"], ["growth", 14], ["created_at", "2020-08-02 17:23:53.557753"], ["updated_at", "2020-08-02 17:23:53.557753"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:23:53.560506"], ["fed_at", "2020-08-02 17:23:53.560519"], ["growth", 14], ["created_at", "2020-08-02 17:23:53.560538"], ["updated_at", "2020-08-02 17:23:53.560538"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:23:53.562840"], ["fed_at", "2020-08-02 17:23:53.562853"], ["growth", 0], ["created_at", "2020-08-02 17:23:53.562872"], ["updated_at", "2020-08-02 17:23:53.562872"], ["water_amount", 0], ["fed_amount", 0]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:23:53.565125"], ["fed_at", "2020-08-02 17:23:53.565138"], ["growth", 10], ["created_at", "2020-08-02 17:23:53.565157"], ["updated_at", "2020-08-02 17:23:53.565157"], ["water_amount", 5], ["fed_amount", 5]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:23:53.567998"], ["fed_at", "2020-08-02 17:23:53.568013"], ["growth", 20], ["created_at", "2020-08-02 17:23:53.568032"], ["updated_at", "2020-08-02 17:23:53.568032"], ["water_amount", 10], ["fed_amount", 10]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:25:20.320469"], ["fed_at", "2020-08-02 17:25:20.320503"], ["growth", 14], ["created_at", "2020-08-02 17:25:20.320554"], ["updated_at", "2020-08-02 17:25:20.320554"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:25:33.199464"], ["fed_at", "2020-08-02 17:25:33.199478"], ["growth", 14], ["created_at", "2020-08-02 17:25:33.199500"], ["updated_at", "2020-08-02 17:25:33.199500"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (2.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:25:33.204580"], ["fed_at", "2020-08-02 17:25:33.204595"], ["growth", 14], ["created_at", "2020-08-02 17:25:33.204621"], ["updated_at", "2020-08-02 17:25:33.204621"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:25:33.208278"], ["fed_at", "2020-08-02 17:25:33.208298"], ["growth", 14], ["created_at", "2020-08-02 17:25:33.208326"], ["updated_at", "2020-08-02 17:25:33.208326"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:25:33.211206"], ["fed_at", "2020-08-02 17:25:33.211221"], ["growth", 0], ["created_at", "2020-08-02 17:25:33.211249"], ["updated_at", "2020-08-02 17:25:33.211249"], ["water_amount", 0], ["fed_amount", 0]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:25:33.213939"], ["fed_at", "2020-08-02 17:25:33.213958"], ["growth", 10], ["created_at", "2020-08-02 17:25:33.213984"], ["updated_at", "2020-08-02 17:25:33.213984"], ["water_amount", 5], ["fed_amount", 5]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (1.0ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:25:33.216746"], ["fed_at", "2020-08-02 17:25:33.216760"], ["growth", 20], ["created_at", "2020-08-02 17:25:33.216783"], ["updated_at", "2020-08-02 17:25:33.216783"], ["water_amount", 10], ["fed_amount", 10]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:26:09.775708"], ["fed_at", "2020-08-02 17:26:09.775726"], ["growth", 14], ["created_at", "2020-08-02 17:26:09.775756"], ["updated_at", "2020-08-02 17:26:09.775756"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Destroy (0.1ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:26:17.490266"], ["fed_at", "2020-08-02 17:26:17.490283"], ["growth", 14], ["created_at", "2020-08-02 17:26:17.490309"], ["updated_at", "2020-08-02 17:26:17.490309"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Destroy (0.1ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:26:17.497462"], ["fed_at", "2020-08-02 17:26:17.497479"], ["growth", 14], ["created_at", "2020-08-02 17:26:17.497504"], ["updated_at", "2020-08-02 17:26:17.497504"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Destroy (0.1ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:26:17.506575"], ["fed_at", "2020-08-02 17:26:17.506598"], ["growth", 14], ["created_at", "2020-08-02 17:26:17.506666"], ["updated_at", "2020-08-02 17:26:17.506666"], ["water_amount", 10], ["fed_amount", 4]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Destroy (0.1ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:26:17.511270"], ["fed_at", "2020-08-02 17:26:17.511285"], ["growth", 0], ["created_at", "2020-08-02 17:26:17.511306"], ["updated_at", "2020-08-02 17:26:17.511306"], ["water_amount", 0], ["fed_amount", 0]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.8ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:26:17.515428"], ["fed_at", "2020-08-02 17:26:17.515560"], ["growth", 10], ["created_at", "2020-08-02 17:26:17.515598"], ["updated_at", "2020-08-02 17:26:17.515598"], ["water_amount", 5], ["fed_amount", 5]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:26:17.519094"], ["fed_at", "2020-08-02 17:26:17.519110"], ["growth", 20], ["created_at", "2020-08-02 17:26:17.519135"], ["updated_at", "2020-08-02 17:26:17.519135"], ["water_amount", 10], ["fed_amount", 10]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:27:27.614056"], ["fed_at", "2020-08-02 17:27:27.614070"], ["growth", 0], ["created_at", "2020-08-02 17:27:27.614101"], ["updated_at", "2020-08-02 17:27:27.614101"], ["water_amount", 0], ["fed_amount", 0]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:27:27.619078"], ["fed_at", "2020-08-02 17:27:27.619096"], ["growth", 10], ["created_at", "2020-08-02 17:27:27.619123"], ["updated_at", "2020-08-02 17:27:27.619123"], ["water_amount", 5], ["fed_amount", 5]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:27:27.622513"], ["fed_at", "2020-08-02 17:27:27.622536"], ["growth", 20], ["created_at", "2020-08-02 17:27:27.622606"], ["updated_at", "2020-08-02 17:27:27.622606"], ["water_amount", 10], ["fed_amount", 10]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:28:34.869620"], ["fed_at", "2020-08-02 17:28:34.869635"], ["growth", 0], ["created_at", "2020-08-02 17:28:34.869666"], ["updated_at", "2020-08-02 17:28:34.869666"], ["water_amount", 0], ["fed_amount", 0]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:28:34.874771"], ["fed_at", "2020-08-02 17:28:34.874840"], ["growth", 10], ["created_at", "2020-08-02 17:28:34.874864"], ["updated_at", "2020-08-02 17:28:34.874864"], ["water_amount", 5], ["fed_amount", 5]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:28:34.877492"], ["fed_at", "2020-08-02 17:28:34.877508"], ["growth", 20], ["created_at", "2020-08-02 17:28:34.877530"], ["updated_at", "2020-08-02 17:28:34.877530"], ["water_amount", 10], ["fed_amount", 10]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:19:45.370474"], ["fed_at", "2020-08-02 17:19:45.370513"], ["growth", 0], ["created_at", "2020-08-02 17:29:45.377519"], ["updated_at", "2020-08-02 17:29:45.377519"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Destroy (0.1ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:29:51.269244"], ["fed_at", "2020-08-02 17:19:51.269263"], ["growth", 0], ["created_at", "2020-08-02 17:29:51.269733"], ["updated_at", "2020-08-02 17:29:51.269733"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Destroy (0.1ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:19:51.276357"], ["fed_at", "2020-08-02 17:19:51.276394"], ["growth", 0], ["created_at", "2020-08-02 17:29:51.276826"], ["updated_at", "2020-08-02 17:29:51.276826"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Destroy (0.1ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:25:51.282120"], ["fed_at", "2020-08-02 17:29:51.282153"], ["growth", 0], ["created_at", "2020-08-02 17:29:51.282681"], ["updated_at", "2020-08-02 17:29:51.282681"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Destroy (0.1ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:29:51.289210"], ["fed_at", "2020-08-02 17:29:51.289226"], ["growth", 0], ["created_at", "2020-08-02 17:29:51.289249"], ["updated_at", "2020-08-02 17:29:51.289249"], ["water_amount", 0], ["fed_amount", 0]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.6ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:29:51.293083"], ["fed_at", "2020-08-02 17:29:51.293102"], ["growth", 10], ["created_at", "2020-08-02 17:29:51.293127"], ["updated_at", "2020-08-02 17:29:51.293127"], ["water_amount", 5], ["fed_amount", 5]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:29:51.297604"], ["fed_at", "2020-08-02 17:29:51.297620"], ["growth", 20], ["created_at", "2020-08-02 17:29:51.298415"], ["updated_at", "2020-08-02 17:29:51.298415"], ["water_amount", 10], ["fed_amount", 10]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:20:42.053663"], ["fed_at", "2020-08-02 17:20:42.053698"], ["growth", 0], ["created_at", "2020-08-02 17:30:42.065422"], ["updated_at", "2020-08-02 17:30:42.065422"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Destroy (0.1ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:30:42.130744"], ["fed_at", "2020-08-02 17:20:42.130759"], ["growth", 0], ["created_at", "2020-08-02 17:30:42.131170"], ["updated_at", "2020-08-02 17:30:42.131170"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Destroy (0.0ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:20:42.133653"], ["fed_at", "2020-08-02 17:20:42.133677"], ["growth", 0], ["created_at", "2020-08-02 17:30:42.133991"], ["updated_at", "2020-08-02 17:30:42.133991"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Destroy (0.0ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:26:42.136328"], ["fed_at", "2020-08-02 17:30:42.136349"], ["growth", 0], ["created_at", "2020-08-02 17:30:42.136701"], ["updated_at", "2020-08-02 17:30:42.136701"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Destroy (0.0ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:30:42.139452"], ["fed_at", "2020-08-02 17:30:42.139466"], ["growth", 0], ["created_at", "2020-08-02 17:30:42.139487"], ["updated_at", "2020-08-02 17:30:42.139487"], ["water_amount", 0], ["fed_amount", 0]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Destroy (0.0ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:30:42.142558"], ["fed_at", "2020-08-02 17:30:42.142572"], ["growth", 10], ["created_at", "2020-08-02 17:30:42.142644"], ["updated_at", "2020-08-02 17:30:42.142644"], ["water_amount", 5], ["fed_amount", 5]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Destroy (0.0ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Daisy"], ["watered_at", "2020-08-02 17:30:42.145349"], ["fed_at", "2020-08-02 17:30:42.145364"], ["growth", 20], ["created_at", "2020-08-02 17:30:42.145385"], ["updated_at", "2020-08-02 17:30:42.145385"], ["water_amount", 10], ["fed_amount", 10]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPlant Destroy (0.1ms)[0m  [1m[31mDELETE FROM "plants" WHERE "plants"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m

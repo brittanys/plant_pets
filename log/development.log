@@ -1,0 +1,1046 @@
+Started GET "/" for ::1 at 2020-07-31 14:28:32 -0400
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.4.3) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.4.3) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (2.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to CreatePlants (20200731182343)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "plants" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "watered_at" datetime, "fed_at" datetime, "growth" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200731182343_create_plants.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200731182343"]]
+  ↳ bin/rails:9
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-07-31 18:28:43.246420"], ["updated_at", "2020-07-31 18:28:43.246420"]]
+  ↳ bin/rails:9
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for ::1 at 2020-07-31 14:28:52 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/brittanyw/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/brittanyw/.rvm/gems/ruby-2.5.1/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/brittanyw/.rvm/gems/ruby-2.5.1/gems/railties-5.2.4.3/lib/rails/templates/rails/welcome/index.html.erb (3.4ms)
+Completed 200 OK in 16ms (Views: 8.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants" for ::1 at 2020-07-31 14:29:00 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.8ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:17
+  Rendered plants/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 803ms (Views: 786.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/plants/new" for ::1 at 2020-07-31 14:29:03 -0400
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/_form.html.erb (33.5ms)
+  Rendered plants/new.html.erb within layouts/application (39.5ms)
+Completed 200 OK in 77ms (Views: 58.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/plants" for ::1 at 2020-07-31 14:29:14 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:17
+  Rendered plants/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 74ms (Views: 58.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/new" for ::1 at 2020-07-31 14:29:15 -0400
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/_form.html.erb (20.5ms)
+  Rendered plants/new.html.erb within layouts/application (24.9ms)
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plants" for ::1 at 2020-07-31 14:29:32 -0400
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S/mI6Jf/zU4vBav1h02l8mdmCKk6hMmxOGg/Xc3nGOqqfZAHNslzEPked5HLk07fRWSoQwsMbkei86RsBx32/A==", "plant"=>{"name"=>"Bob", "watered_at(1i)"=>"2020", "watered_at(2i)"=>"7", "watered_at(3i)"=>"31", "watered_at(4i)"=>"18", "watered_at(5i)"=>"29", "fed_at(1i)"=>"2020", "fed_at(2i)"=>"7", "fed_at(3i)"=>"31", "fed_at(4i)"=>"18", "fed_at(5i)"=>"29", "growth"=>""}, "commit"=>"Create Plant"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/plants_controller.rb:30
+  [1m[36mPlant Create (0.9ms)[0m  [1m[32mINSERT INTO "plants" ("name", "watered_at", "fed_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Bob"], ["watered_at", "2020-07-31 18:29:00"], ["fed_at", "2020-07-31 18:29:00"], ["created_at", "2020-07-31 18:29:32.740181"], ["updated_at", "2020-07-31 18:29:32.740181"]]
+  ↳ app/controllers/plants_controller.rb:30
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/plants_controller.rb:30
+Redirected to http://localhost:3000/plants/1
+Completed 302 Found in 10ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/plants/1" for ::1 at 2020-07-31 14:29:32 -0400
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 30ms (Views: 23.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants" for ::1 at 2020-07-31 14:29:34 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:17
+  Rendered plants/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 44ms (Views: 38.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/1/edit" for ::1 at 2020-07-31 14:29:37 -0400
+Processing by PlantsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (2.9ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/edit.html.erb within layouts/application
+  Rendered plants/_form.html.erb (12.9ms)
+  Rendered plants/edit.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 66ms (Views: 57.5ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/plants" for ::1 at 2020-07-31 14:29:38 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:17
+  Rendered plants/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 70ms (Views: 54.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 11:13:35 -0400
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/brittanyw/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.7ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:17
+  Rendered plants/index.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 243ms (Views: 229.7ms | ActiveRecord: 1.7ms)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddWaterAmountAndFedAmountToPlants (20200801151734)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "plants" ADD "water_amount" integer[0m
+  ↳ db/migrate/20200801151734_add_water_amount_and_fed_amount_to_plants.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "plants" ADD "fed_amount" integer[0m
+  ↳ db/migrate/20200801151734_add_water_amount_and_fed_amount_to_plants.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200801151734"]]
+  ↳ bin/rails:9
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/plants" for ::1 at 2020-08-01 11:27:53 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/brittanyw/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:17
+  Rendered plants/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 221ms (Views: 211.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/plants/1" for ::1 at 2020-08-01 11:27:57 -0400
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 51ms (Views: 40.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 11:27:58 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:17
+  Rendered plants/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 64ms (Views: 47.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plants/1/edit" for ::1 at 2020-08-01 11:28:00 -0400
+Processing by PlantsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/edit.html.erb within layouts/application
+  Rendered plants/_form.html.erb (20.0ms)
+  Rendered plants/edit.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 58ms (Views: 48.3ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/plants/1" for ::1 at 2020-08-01 11:28:12 -0400
+Processing by PlantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FvYWBQVQs7NnuG67uPpP/ECIDBg/Q7HcqkylAthmlTCTvzeSeV6qAYIeAjNN7kt6G/DwblYEpZg1jgJEzw24Vg==", "plant"=>{"name"=>"Bob", "water_amount"=>"3", "fed_amount"=>"4", "growth"=>"1"}, "commit"=>"Update Plant", "id"=>"1"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/plants_controller.rb:44
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/plants_controller.rb:44
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `changed?' for 3:Integer):
+  
+app/models/plant.rb:13:in `set_watered_at'
+app/controllers/plants_controller.rb:44:in `block in update'
+app/controllers/plants_controller.rb:43:in `update'
+Started PATCH "/plants/1" for ::1 at 2020-08-01 11:29:17 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/brittanyw/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by PlantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FvYWBQVQs7NnuG67uPpP/ECIDBg/Q7HcqkylAthmlTCTvzeSeV6qAYIeAjNN7kt6G/DwblYEpZg1jgJEzw24Vg==", "plant"=>{"name"=>"Bob", "water_amount"=>"3", "fed_amount"=>"4", "growth"=>"1"}, "commit"=>"Update Plant", "id"=>"1"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/plants_controller.rb:44
+  [1m[36mPlant Update (0.9ms)[0m  [1m[33mUPDATE "plants" SET "water_amount" = ?, "fed_amount" = ?, "growth" = ?, "updated_at" = ? WHERE "plants"."id" = ?[0m  [["water_amount", 3], ["fed_amount", 4], ["growth", 1], ["updated_at", "2020-08-01 15:29:18.079934"], ["id", 1]]
+  ↳ app/controllers/plants_controller.rb:44
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/plants_controller.rb:44
+Redirected to http://localhost:3000/plants/1
+Completed 302 Found in 28ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/plants/1" for ::1 at 2020-08-01 11:29:18 -0400
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 217ms (Views: 210.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 11:29:20 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:17
+  Rendered plants/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 45ms (Views: 40.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants/1/edit" for ::1 at 2020-08-01 11:29:22 -0400
+Processing by PlantsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/edit.html.erb within layouts/application
+  Rendered plants/_form.html.erb (17.6ms)
+  Rendered plants/edit.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 59ms (Views: 51.0ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/plants/1" for ::1 at 2020-08-01 11:29:29 -0400
+Processing by PlantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qprJZJ8iZncDgK2ezrZ6f4BAd+A/Rag5HmPmFl6aRlwv0+jz4yx/xeYmwRY7on752ziLllYCvH2BoUFQSfFrOg==", "plant"=>{"name"=>"Bob", "water_amount"=>"6", "fed_amount"=>"6", "growth"=>"1"}, "commit"=>"Update Plant", "id"=>"1"}
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/plants_controller.rb:44
+  [1m[36mPlant Update (0.6ms)[0m  [1m[33mUPDATE "plants" SET "water_amount" = ?, "fed_amount" = ?, "updated_at" = ? WHERE "plants"."id" = ?[0m  [["water_amount", 6], ["fed_amount", 6], ["updated_at", "2020-08-01 15:29:29.163585"], ["id", 1]]
+  ↳ app/controllers/plants_controller.rb:44
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/plants_controller.rb:44
+Redirected to http://localhost:3000/plants/1
+Completed 302 Found in 13ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/plants/1" for ::1 at 2020-08-01 11:29:29 -0400
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 26.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/1" for ::1 at 2020-08-01 11:42:43 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/brittanyw/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 245ms (Views: 225.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 11:42:46 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:18
+  Rendered plants/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 23ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/1/edit" for ::1 at 2020-08-01 11:43:04 -0400
+Processing by PlantsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/edit.html.erb within layouts/application
+  Rendered plants/_form.html.erb (15.0ms)
+  Rendered plants/edit.html.erb within layouts/application (17.5ms)
+Completed 200 OK in 48ms (Views: 35.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/plants/1" for ::1 at 2020-08-01 11:43:05 -0400
+Processing by PlantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Wb2SyquNtlG6C6WhlOo4d+GMZUiU56qZs2AW6wWZ2J8L9fcVqAva6NOQh5zR6xnhP7N40sUiu75Dycdu31KBA==", "plant"=>{"name"=>"Bob", "water_amount"=>"6", "fed_amount"=>"6", "growth"=>"1"}, "commit"=>"Update Plant", "id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/plants_controller.rb:44
+  [1m[36mPlant Update (0.8ms)[0m  [1m[33mUPDATE "plants" SET "growth" = ?, "updated_at" = ? WHERE "plants"."id" = ?[0m  [["growth", 12], ["updated_at", "2020-08-01 15:43:05.657466"], ["id", 1]]
+  ↳ app/controllers/plants_controller.rb:44
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/plants_controller.rb:44
+Redirected to http://localhost:3000/plants/1
+Completed 302 Found in 9ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/plants/1" for ::1 at 2020-08-01 11:43:05 -0400
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 26ms (Views: 20.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 11:43:07 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:18
+  Rendered plants/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 42ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 11:43:10 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:18
+  Rendered plants/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 24ms (Views: 18.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 11:43:11 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:18
+  Rendered plants/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 25ms (Views: 20.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 11:48:19 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:18
+  Rendered plants/index.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 30ms (Views: 25.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 11:49:18 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:20
+  Rendered plants/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 30ms (Views: 21.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 11:51:14 -0400
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/brittanyw/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:20
+  Rendered plants/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 251ms (Views: 239.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 11:51:36 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 31ms (Views: 24.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 11:51:39 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 11:51:54 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 31ms (Views: 25.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/1/edit" for ::1 at 2020-08-01 12:24:30 -0400
+Processing by PlantsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/edit.html.erb within layouts/application
+  Rendered plants/_form.html.erb (10.0ms)
+  Rendered plants/edit.html.erb within layouts/application (12.4ms)
+Completed 200 OK in 41ms (Views: 28.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 12:24:34 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 40ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/1/edit" for ::1 at 2020-08-01 12:24:36 -0400
+Processing by PlantsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/edit.html.erb within layouts/application
+  Rendered plants/_form.html.erb (3.3ms)
+  Rendered plants/edit.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 35ms (Views: 26.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 12:24:38 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 35ms (Views: 32.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/plants/1/edit" for ::1 at 2020-08-01 12:24:47 -0400
+Processing by PlantsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/edit.html.erb within layouts/application
+  Rendered plants/_form.html.erb (3.6ms)
+  Rendered plants/edit.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 45ms (Views: 42.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 12:24:51 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 40ms (Views: 31.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants/1/edit" for ::1 at 2020-08-01 12:25:02 -0400
+Processing by PlantsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.8ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/edit.html.erb within layouts/application
+  Rendered plants/_form.html.erb (3.7ms)
+  Rendered plants/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 38ms (Views: 30.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 12:25:04 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 30.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 12:28:32 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 61ms (Views: 55.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 12:30:10 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (15.4ms)
+Completed 200 OK in 74ms (Views: 66.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/plants/new" for ::1 at 2020-08-01 21:06:04 -0400
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/_form.html.erb (2.9ms)
+  Rendered plants/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 53ms (Views: 48.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants/new" for ::1 at 2020-08-01 21:06:04 -0400
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/_form.html.erb (3.7ms)
+  Rendered plants/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/plants" for ::1 at 2020-08-01 21:06:16 -0400
+Processing by PlantsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PoarHpxkw7sR0bmzd3PP0fk1Xkc4zKMtECy6Wf/ewtCymwgEy4r6s1LDuR/BY8U2yo+grqjxts5aVlT9djbuaw==", "plant"=>{"name"=>"Rose", "water_amount"=>"2", "fed_amount"=>"2", "growth"=>"1"}, "commit"=>"Create Plant"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/plants_controller.rb:30
+  [1m[36mPlant Create (1.1ms)[0m  [1m[32mINSERT INTO "plants" ("name", "growth", "created_at", "updated_at", "water_amount", "fed_amount") VALUES (?, ?, ?, ?, ?, ?)[0m  [["name", "Rose"], ["growth", 4], ["created_at", "2020-08-02 01:06:16.909411"], ["updated_at", "2020-08-02 01:06:16.909411"], ["water_amount", 2], ["fed_amount", 2]]
+  ↳ app/controllers/plants_controller.rb:30
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/plants_controller.rb:30
+Redirected to http://localhost:3000/plants/2
+Completed 302 Found in 9ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/plants/2" for ::1 at 2020-08-01 21:06:16 -0400
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 58ms (Views: 54.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 21:06:18 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (8.0ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `<=' for nil:NilClass):
+    20:       <tr>
+    21:         <td><%= plant.name %></td>
+    22:         <td><%= plant.water_amount %></td>
+    23:         <td><%= plant.needs_water? %></td>
+    24:         <td><%= plant.fed_amount %></td>
+    25:         <td><%= plant.needs_food? %></td>
+    26:         <td><%= plant.age %></td>
+  
+app/models/plant.rb:5:in `needs_water?'
+app/views/plants/index.html.erb:23:in `block in _app_views_plants_index_html_erb__3343521241300828213_70298876837500'
+app/views/plants/index.html.erb:19:in `_app_views_plants_index_html_erb__3343521241300828213_70298876837500'
+Started GET "/plants/2" for ::1 at 2020-08-01 21:06:24 -0400
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 29ms (Views: 25.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/2" for ::1 at 2020-08-01 21:06:26 -0400
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlant Load (0.9ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 42ms (Views: 37.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-01 21:06:30 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (6.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `<=' for nil:NilClass):
+    20:       <tr>
+    21:         <td><%= plant.name %></td>
+    22:         <td><%= plant.water_amount %></td>
+    23:         <td><%= plant.needs_water? %></td>
+    24:         <td><%= plant.fed_amount %></td>
+    25:         <td><%= plant.needs_food? %></td>
+    26:         <td><%= plant.age %></td>
+  
+app/models/plant.rb:5:in `needs_water?'
+app/views/plants/index.html.erb:23:in `block in _app_views_plants_index_html_erb__3343521241300828213_70298885450220'
+app/views/plants/index.html.erb:19:in `_app_views_plants_index_html_erb__3343521241300828213_70298885450220'
+Started GET "/plants" for ::1 at 2020-08-01 21:07:20 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (72.6ms)
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 1.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `<=' for nil:NilClass):
+    20:       <tr>
+    21:         <td><%= plant.name %></td>
+    22:         <td><%= plant.water_amount %></td>
+    23:         <td><%= plant.needs_water? %></td>
+    24:         <td><%= plant.fed_amount %></td>
+    25:         <td><%= plant.needs_food? %></td>
+    26:         <td><%= plant.age %></td>
+  
+app/models/plant.rb:5:in `needs_water?'
+app/views/plants/index.html.erb:23:in `block in _app_views_plants_index_html_erb__3343521241300828213_70298839742240'
+app/views/plants/index.html.erb:19:in `_app_views_plants_index_html_erb__3343521241300828213_70298839742240'
+Started GET "/plants" for ::1 at 2020-08-01 21:07:25 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (10.1ms)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `<=' for nil:NilClass):
+    20:       <tr>
+    21:         <td><%= plant.name %></td>
+    22:         <td><%= plant.water_amount %></td>
+    23:         <td><%= plant.needs_water? %></td>
+    24:         <td><%= plant.fed_amount %></td>
+    25:         <td><%= plant.needs_food? %></td>
+    26:         <td><%= plant.age %></td>
+  
+app/models/plant.rb:5:in `needs_water?'
+app/views/plants/index.html.erb:23:in `block in _app_views_plants_index_html_erb__3343521241300828213_70298845533280'
+app/views/plants/index.html.erb:19:in `_app_views_plants_index_html_erb__3343521241300828213_70298845533280'
+Started GET "/plants" for ::1 at 2020-08-01 21:07:28 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `<=' for nil:NilClass):
+    20:       <tr>
+    21:         <td><%= plant.name %></td>
+    22:         <td><%= plant.water_amount %></td>
+    23:         <td><%= plant.needs_water? %></td>
+    24:         <td><%= plant.fed_amount %></td>
+    25:         <td><%= plant.needs_food? %></td>
+    26:         <td><%= plant.age %></td>
+  
+app/models/plant.rb:5:in `needs_water?'
+app/views/plants/index.html.erb:23:in `block in _app_views_plants_index_html_erb__3343521241300828213_70298843956100'
+app/views/plants/index.html.erb:19:in `_app_views_plants_index_html_erb__3343521241300828213_70298843956100'
+Started GET "/plants" for ::1 at 2020-08-02 11:11:10 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (24.3ms)
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `<=' for nil:NilClass):
+    20:       <tr>
+    21:         <td><%= plant.name %></td>
+    22:         <td><%= plant.water_amount %></td>
+    23:         <td><%= plant.needs_water? %></td>
+    24:         <td><%= plant.fed_amount %></td>
+    25:         <td><%= plant.needs_food? %></td>
+    26:         <td><%= plant.age %></td>
+  
+app/models/plant.rb:5:in `needs_water?'
+app/views/plants/index.html.erb:23:in `block in _app_views_plants_index_html_erb__3343521241300828213_70298884435060'
+app/views/plants/index.html.erb:19:in `_app_views_plants_index_html_erb__3343521241300828213_70298884435060'
+Started GET "/plants" for ::1 at 2020-08-02 11:11:12 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `<=' for nil:NilClass):
+    20:       <tr>
+    21:         <td><%= plant.name %></td>
+    22:         <td><%= plant.water_amount %></td>
+    23:         <td><%= plant.needs_water? %></td>
+    24:         <td><%= plant.fed_amount %></td>
+    25:         <td><%= plant.needs_food? %></td>
+    26:         <td><%= plant.age %></td>
+  
+app/models/plant.rb:5:in `needs_water?'
+app/views/plants/index.html.erb:23:in `block in _app_views_plants_index_html_erb__3343521241300828213_70298892674180'
+app/views/plants/index.html.erb:19:in `_app_views_plants_index_html_erb__3343521241300828213_70298892674180'
+Started GET "/plants" for ::1 at 2020-08-02 11:11:33 -0400
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/brittanyw/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (19.9ms)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `<=' for nil:NilClass):
+    20:       <tr>
+    21:         <td><%= plant.name %></td>
+    22:         <td><%= plant.water_amount %></td>
+    23:         <td><%= plant.needs_water? %></td>
+    24:         <td><%= plant.fed_amount %></td>
+    25:         <td><%= plant.needs_food? %></td>
+    26:         <td><%= plant.age %></td>
+  
+app/models/plant.rb:5:in `needs_water?'
+app/views/plants/index.html.erb:23:in `block in _app_views_plants_index_html_erb__3547426066554040758_70251459619540'
+app/views/plants/index.html.erb:19:in `_app_views_plants_index_html_erb__3547426066554040758_70251459619540'
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" ORDER BY "plants"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlant Update (0.5ms)[0m  [1m[33mUPDATE "plants" SET "watered_at" = ?, "fed_at" = ?, "updated_at" = ? WHERE "plants"."id" = ?[0m  [["watered_at", "2020-08-02 15:13:08.077121"], ["fed_at", "2020-08-02 15:13:08.077155"], ["updated_at", "2020-08-02 15:13:08.077678"], ["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/plants/new" for ::1 at 2020-08-02 11:13:31 -0400
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/brittanyw/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.4.3/lib/active_record/log_subscriber.rb:98
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/_form.html.erb (16.8ms)
+  Rendered plants/new.html.erb within layouts/application (20.5ms)
+Completed 200 OK in 255ms (Views: 237.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-02 11:13:35 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 47ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/2/edit" for ::1 at 2020-08-02 11:13:39 -0400
+Processing by PlantsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/edit.html.erb within layouts/application
+  Rendered plants/_form.html.erb (3.2ms)
+  Rendered plants/edit.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 50ms (Views: 40.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/2" for ::1 at 2020-08-02 11:13:42 -0400
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 53ms (Views: 43.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-02 11:13:43 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 37ms (Views: 28.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plants/2/edit" for ::1 at 2020-08-02 11:13:45 -0400
+Processing by PlantsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/edit.html.erb within layouts/application
+  Rendered plants/_form.html.erb (4.2ms)
+  Rendered plants/edit.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 54ms (Views: 46.4ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/plants/2" for ::1 at 2020-08-02 11:13:48 -0400
+Processing by PlantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WBOjj0x1y/usJgzeBfUJ9WdvPQgk+agMvM4Y9YtxdGGX27eEbPBqblkDgwfWQtzLR2/LmFHEuVVOZeaS6SPKhw==", "plant"=>{"name"=>"Rose", "water_amount"=>"1", "fed_amount"=>"2"}, "commit"=>"Update Plant", "id"=>"2"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/plants_controller.rb:44
+  [1m[36mPlant Update (0.4ms)[0m  [1m[33mUPDATE "plants" SET "water_amount" = ?, "watered_at" = ?, "fed_at" = ?, "growth" = ?, "updated_at" = ? WHERE "plants"."id" = ?[0m  [["water_amount", 1], ["watered_at", "2020-08-02 15:13:48.566002"], ["fed_at", "2020-08-02 15:13:48.566142"], ["growth", 3], ["updated_at", "2020-08-02 15:13:48.566602"], ["id", 2]]
+  ↳ app/controllers/plants_controller.rb:44
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/plants_controller.rb:44
+Redirected to http://localhost:3000/plants/2
+Completed 302 Found in 11ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/plants/2" for ::1 at 2020-08-02 11:13:48 -0400
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 54ms (Views: 50.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-02 11:13:50 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 40ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants/new" for ::1 at 2020-08-02 11:13:51 -0400
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/_form.html.erb (4.1ms)
+  Rendered plants/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 42ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-02 11:13:52 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 50ms (Views: 44.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plants/1" for ::1 at 2020-08-02 11:13:56 -0400
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 53ms (Views: 45.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-02 11:13:59 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 75ms (Views: 65.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/plants/2/edit" for ::1 at 2020-08-02 11:14:01 -0400
+Processing by PlantsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlant Load (0.9ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/edit.html.erb within layouts/application
+  Rendered plants/_form.html.erb (4.8ms)
+  Rendered plants/edit.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 60ms (Views: 52.3ms | ActiveRecord: 0.9ms)
+
+
+Started PATCH "/plants/2" for ::1 at 2020-08-02 11:14:04 -0400
+Processing by PlantsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6pLVsXIMdHcbXJ439qOiuJdvsuoxvySvZV3zxtbQNrklWsG6UonV4u55Ee4lFHeGt29EekSCNfaX9g2htIKIXw==", "plant"=>{"name"=>"Rose", "water_amount"=>"5", "fed_amount"=>"2"}, "commit"=>"Update Plant", "id"=>"2"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/plants_controller.rb:44
+  [1m[36mPlant Update (1.0ms)[0m  [1m[33mUPDATE "plants" SET "water_amount" = ?, "watered_at" = ?, "fed_at" = ?, "growth" = ?, "updated_at" = ? WHERE "plants"."id" = ?[0m  [["water_amount", 5], ["watered_at", "2020-08-02 15:14:04.632658"], ["fed_at", "2020-08-02 15:14:04.632876"], ["growth", 7], ["updated_at", "2020-08-02 15:14:04.633023"], ["id", 2]]
+  ↳ app/controllers/plants_controller.rb:44
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/plants_controller.rb:44
+Redirected to http://localhost:3000/plants/2
+Completed 302 Found in 20ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/plants/2" for ::1 at 2020-08-02 11:14:04 -0400
+Processing by PlantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/show.html.erb within layouts/application
+  Rendered plants/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 37ms (Views: 30.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-02 11:14:12 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 64ms (Views: 52.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants/1/edit" for ::1 at 2020-08-02 12:36:33 -0400
+Processing by PlantsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" WHERE "plants"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:67
+  Rendering plants/edit.html.erb within layouts/application
+  Rendered plants/_form.html.erb (1.8ms)
+  Rendered plants/edit.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 28ms (Views: 23.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-02 12:36:35 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 29ms (Views: 22.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-02 12:38:38 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 29ms (Views: 23.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-02 12:38:42 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 30ms (Views: 25.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/plants/new" for ::1 at 2020-08-02 12:38:48 -0400
+Processing by PlantsController#new as HTML
+  Rendering plants/new.html.erb within layouts/application
+  Rendered plants/_form.html.erb (3.0ms)
+  Rendered plants/new.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 38ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/plants" for ::1 at 2020-08-02 12:38:54 -0400
+Processing by PlantsController#index as HTML
+  Rendering plants/index.html.erb within layouts/application
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/views/plants/index.html.erb:19
+  Rendered plants/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 41ms (Views: 31.1ms | ActiveRecord: 0.3ms)
+
+
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" ORDER BY "plants"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" ORDER BY "plants"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" ORDER BY "plants"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" ORDER BY "plants"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" ORDER BY "plants"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPlant Update (1.0ms)[0m  [1m[33mUPDATE "plants" SET "watered_at" = ?, "fed_at" = ?, "updated_at" = ? WHERE "plants"."id" = ?[0m  [["watered_at", "2020-08-02 16:52:09.320769"], ["fed_at", "2020-08-02 16:52:09.320810"], ["updated_at", "2020-08-02 16:52:09.322771"], ["id", 2]]
+  [1m[35m (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT  "plants".* FROM "plants" ORDER BY "plants"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]

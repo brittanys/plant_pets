@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @plant.name %>
+</p>
+
+<p>
+  <strong>Watered at:</strong>
+  <%= @plant.watered_at %>
+</p>
+
+<p>
+  <strong>Fed at:</strong>
+  <%= @plant.fed_at %>
+</p>
+
+<p>
+  <strong>Growth:</strong>
+  <%= @plant.growth %>
+</p>
+
+<%= link_to 'Edit', edit_plant_path(@plant) %> |
+<%= link_to 'Back', plants_path %>
