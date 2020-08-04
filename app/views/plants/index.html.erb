@@ -1,6 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Plants</h1>
+<h1>Plant Pets
+  <img src='/assets/plant.png' height='50' width='50' />
+</h1>
 
 <table id='plants'>
   <thead>
@@ -20,7 +22,7 @@
       <tr>
         <td><%= plant.name %></td>
         <td><%= plant.water_amount %></td>
-        <td><%= plant.needs_water? %></td>
+        <td><%= plant.needs_water?%></td>
         <td><%= plant.fed_amount %></td>
         <td><%= plant.needs_food? %></td>
         <td><%= plant.age %></td>

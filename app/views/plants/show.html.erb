@@ -1,23 +1,38 @@
 <p id="notice"><%= notice %></p>
 
+<h1>
+  Plant Pet
+  <img src='/assets/plant.png' height='100' width='100' />
+</h1>
+<hr/>
 <p>
   <strong>Name:</strong>
   <%= @plant.name %>
 </p>
 
 <p>
-  <strong>Watered at:</strong>
-  <%= @plant.watered_at %>
+  <strong>Needs Water:</strong>
+  <%= @plant.needs_water? %>
 </p>
 
 <p>
-  <strong>Fed at:</strong>
-  <%= @plant.fed_at %>
+  <strong>Water:</strong>
+  <%= @plant.water_amount %>
 </p>
 
 <p>
-  <strong>Growth:</strong>
-  <%= @plant.growth %>
+  <strong>Needs Food:</strong>
+  <%= @plant.needs_food? %>
+</p>
+
+<p>
+  <strong>Food:</strong>
+  <%= @plant.fed_amount %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @plant.age %>
 </p>
 
 <%= link_to 'Edit', edit_plant_path(@plant) %> |

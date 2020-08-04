@@ -2,11 +2,13 @@ class Plant < ApplicationRecord
   before_save :set_watered_at, :set_fed_at, :set_growth
 
   def needs_water?
-    self.watered_at <= 5.minutes.ago
+    return 'Yes' if self.watered_at <= 5.minutes.ago
+    'No'
   end
 
   def needs_food?
-    self.fed_at <= 10.minutes.ago
+    return 'Yes' if self.fed_at <= 10.minutes.ago
+    'No'
   end
 
   def set_watered_at
